@@ -1,0 +1,722 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6E04627B2BF4687E00286E34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04627A2BF4687E00286E34 /* AppDelegate.swift */; };
+		6E04627D2BF4687E00286E34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04627C2BF4687E00286E34 /* SceneDelegate.swift */; };
+		6E04627F2BF4687E00286E34 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E04627E2BF4687E00286E34 /* ChatViewController.swift */; };
+		6E0462822BF4687E00286E34 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6E0462812BF4687E00286E34 /* Base */; };
+		6E0462842BF4687F00286E34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0462832BF4687F00286E34 /* Assets.xcassets */; };
+		6E0462872BF4687F00286E34 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6E0462862BF4687F00286E34 /* Base */; };
+		6E13339B2BF7BA3600EC7223 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6E13339A2BF7BA3600EC7223 /* FirebaseFirestore */; };
+		6E27C0AE2BF46C2C00BC0BA6 /* WatchLuvYouApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27C0AD2BF46C2C00BC0BA6 /* WatchLuvYouApp.swift */; };
+		6E27C0B22BF46C2C00BC0BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E27C0B12BF46C2C00BC0BA6 /* Assets.xcassets */; };
+		6E27C0B52BF46C2C00BC0BA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E27C0B42BF46C2C00BC0BA6 /* Preview Assets.xcassets */; };
+		6E27C0B82BF46C2C00BC0BA6 /* WatchLuvYou Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 6E27C0AB2BF46C2C00BC0BA6 /* WatchLuvYou Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6E27C0C72BF46C4600BC0BA6 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E27C0C62BF46C4600BC0BA6 /* Storyboard.storyboard */; };
+		6E27C1012BF496F800BC0BA6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27C1002BF496F800BC0BA6 /* ContentView.swift */; };
+		6E27C1032BF4970F00BC0BA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27C1022BF4970F00BC0BA6 /* SettingsView.swift */; };
+		6E27C1052BF4A62700BC0BA6 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27C1042BF4A62700BC0BA6 /* TextView.swift */; };
+		6E27C1072BF4C6C300BC0BA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E27C1062BF4C6C300BC0BA6 /* GoogleService-Info.plist */; };
+		6E27C1082BF4C6C300BC0BA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E27C1062BF4C6C300BC0BA6 /* GoogleService-Info.plist */; };
+		6E3D9BEE2C1C2DEB00077FB2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D9BED2C1C2DEB00077FB2 /* SettingsViewController.swift */; };
+		6E3D9BF02C1C95EE00077FB2 /* JoinStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D9BEF2C1C95EE00077FB2 /* JoinStartViewController.swift */; };
+		6E7419142C05FB4E00649DCA /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7419132C05FB4D00649DCA /* AddTaskViewController.swift */; };
+		6E7419162C06D0FE00649DCA /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7419152C06D0FE00649DCA /* TaskDetailViewController.swift */; };
+		6E7DB7E02BF94D0800B22A86 /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E7DB7DF2BF94D0800B22A86 /* PretendardVariable.ttf */; };
+		6E7DB7E12BF94D0800B22A86 /* PretendardVariable.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6E7DB7DF2BF94D0800B22A86 /* PretendardVariable.ttf */; };
+		6E8995102C00A40100C55ACC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E89950F2C00A40100C55ACC /* HomeViewController.swift */; };
+		6E8995122C00A89D00C55ACC /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8995112C00A89D00C55ACC /* CalendarViewController.swift */; };
+		6E8995162C00DE5A00C55ACC /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8995152C00DE5A00C55ACC /* TabBarViewController.swift */; };
+		6E927C5D2C187C3F00EDA673 /* TaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E927C5C2C187C3F00EDA673 /* TaskListViewController.swift */; };
+		6E927C5F2C1A8B4E00EDA673 /* InstallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E927C5E2C1A8B4E00EDA673 /* InstallViewController.swift */; };
+		6E927C632C1A902300EDA673 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E927C622C1A902300EDA673 /* JoinViewController.swift */; };
+		6E927C652C1A903300EDA673 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E927C642C1A903300EDA673 /* StartViewController.swift */; };
+		6E927C672C1AE9DD00EDA673 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E927C662C1AE9DD00EDA673 /* CodeViewController.swift */; };
+		6ECC856C2C0EF1B700A8F552 /* PeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC856B2C0EF1B700A8F552 /* PeriodViewController.swift */; };
+		6ECC856E2C0FF8F200A8F552 /* AddPeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC856D2C0FF8F200A8F552 /* AddPeriodViewController.swift */; };
+		6ECC85762C1003E500A8F552 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6ECC85752C1003E500A8F552 /* FirebaseStorage */; };
+		6EEC4D222C1F1B6A0033995A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6EEC4D212C1F1B6A0033995A /* FirebaseFirestore */; };
+		6EEC4D242C1F1B7F0033995A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6EEC4D232C1F1B7F0033995A /* FirebaseStorage */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6E27C0B62BF46C2C00BC0BA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E04626F2BF4687E00286E34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E27C0AA2BF46C2C00BC0BA6;
+			remoteInfo = "WatchLuvYou Watch App";
+		};
+		6EEC4D1F2C1F1A280033995A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E04626F2BF4687E00286E34 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E27C0AA2BF46C2C00BC0BA6;
+			remoteInfo = "WatchLuvYou Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6E27C0BC2BF46C2C00BC0BA6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				6E27C0B82BF46C2C00BC0BA6 /* WatchLuvYou Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6E0462772BF4687E00286E34 /* LuvYou.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuvYou.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E04627A2BF4687E00286E34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E04627C2BF4687E00286E34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6E04627E2BF4687E00286E34 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		6E0462812BF4687E00286E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E0462832BF4687F00286E34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E0462862BF4687F00286E34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E0462882BF4687F00286E34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E27C0AB2BF46C2C00BC0BA6 /* WatchLuvYou Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchLuvYou Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E27C0AD2BF46C2C00BC0BA6 /* WatchLuvYouApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchLuvYouApp.swift; sourceTree = "<group>"; };
+		6E27C0B12BF46C2C00BC0BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E27C0B42BF46C2C00BC0BA6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		6E27C0C62BF46C4600BC0BA6 /* Storyboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		6E27C1002BF496F800BC0BA6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = ../ContentView.swift; sourceTree = "<group>"; };
+		6E27C1022BF4970F00BC0BA6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		6E27C1042BF4A62700BC0BA6 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		6E27C1062BF4C6C300BC0BA6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6E3D9BED2C1C2DEB00077FB2 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6E3D9BEF2C1C95EE00077FB2 /* JoinStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinStartViewController.swift; sourceTree = "<group>"; };
+		6E7419132C05FB4D00649DCA /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		6E7419152C06D0FE00649DCA /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		6E7DB7DF2BF94D0800B22A86 /* PretendardVariable.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PretendardVariable.ttf; sourceTree = "<group>"; };
+		6E89950F2C00A40100C55ACC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		6E8995112C00A89D00C55ACC /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		6E8995152C00DE5A00C55ACC /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		6E927C5C2C187C3F00EDA673 /* TaskListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewController.swift; sourceTree = "<group>"; };
+		6E927C5E2C1A8B4E00EDA673 /* InstallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallViewController.swift; sourceTree = "<group>"; };
+		6E927C622C1A902300EDA673 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		6E927C642C1A903300EDA673 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		6E927C662C1AE9DD00EDA673 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
+		6ECC856B2C0EF1B700A8F552 /* PeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewController.swift; sourceTree = "<group>"; };
+		6ECC856D2C0FF8F200A8F552 /* AddPeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPeriodViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6E0462742BF4687E00286E34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E13339B2BF7BA3600EC7223 /* FirebaseFirestore in Frameworks */,
+				6ECC85762C1003E500A8F552 /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E27C0A82BF46C2C00BC0BA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EEC4D222C1F1B6A0033995A /* FirebaseFirestore in Frameworks */,
+				6EEC4D242C1F1B7F0033995A /* FirebaseStorage in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6E04626E2BF4687E00286E34 = {
+			isa = PBXGroup;
+			children = (
+				6E0462792BF4687E00286E34 /* LuvYou */,
+				6E27C0AC2BF46C2C00BC0BA6 /* WatchLuvYou Watch App */,
+				6E0462782BF4687E00286E34 /* Products */,
+				6E1333992BF7BA3600EC7223 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6E0462782BF4687E00286E34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E0462772BF4687E00286E34 /* LuvYou.app */,
+				6E27C0AB2BF46C2C00BC0BA6 /* WatchLuvYou Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6E0462792BF4687E00286E34 /* LuvYou */ = {
+			isa = PBXGroup;
+			children = (
+				6ED786342C1F6959002983D6 /* Images */,
+				6E3D9BED2C1C2DEB00077FB2 /* SettingsViewController.swift */,
+				6E3D9BEF2C1C95EE00077FB2 /* JoinStartViewController.swift */,
+				6E927C662C1AE9DD00EDA673 /* CodeViewController.swift */,
+				6ECC856D2C0FF8F200A8F552 /* AddPeriodViewController.swift */,
+				6ECC856B2C0EF1B700A8F552 /* PeriodViewController.swift */,
+				6E7419152C06D0FE00649DCA /* TaskDetailViewController.swift */,
+				6E927C5C2C187C3F00EDA673 /* TaskListViewController.swift */,
+				6E7419132C05FB4D00649DCA /* AddTaskViewController.swift */,
+				6E8995152C00DE5A00C55ACC /* TabBarViewController.swift */,
+				6E27C1062BF4C6C300BC0BA6 /* GoogleService-Info.plist */,
+				6E7DB7DF2BF94D0800B22A86 /* PretendardVariable.ttf */,
+				6E04627A2BF4687E00286E34 /* AppDelegate.swift */,
+				6E04627C2BF4687E00286E34 /* SceneDelegate.swift */,
+				6E04627E2BF4687E00286E34 /* ChatViewController.swift */,
+				6E0462802BF4687E00286E34 /* Main.storyboard */,
+				6E8995112C00A89D00C55ACC /* CalendarViewController.swift */,
+				6E89950F2C00A40100C55ACC /* HomeViewController.swift */,
+				6E0462832BF4687F00286E34 /* Assets.xcassets */,
+				6E0462852BF4687F00286E34 /* LaunchScreen.storyboard */,
+				6E0462882BF4687F00286E34 /* Info.plist */,
+				6E927C5E2C1A8B4E00EDA673 /* InstallViewController.swift */,
+				6E927C642C1A903300EDA673 /* StartViewController.swift */,
+				6E927C622C1A902300EDA673 /* JoinViewController.swift */,
+			);
+			path = LuvYou;
+			sourceTree = "<group>";
+		};
+		6E1333992BF7BA3600EC7223 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E27C0AC2BF46C2C00BC0BA6 /* WatchLuvYou Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				6E27C1002BF496F800BC0BA6 /* ContentView.swift */,
+				6E27C0AD2BF46C2C00BC0BA6 /* WatchLuvYouApp.swift */,
+				6E27C0B12BF46C2C00BC0BA6 /* Assets.xcassets */,
+				6E27C0B32BF46C2C00BC0BA6 /* Preview Content */,
+				6E27C0C62BF46C4600BC0BA6 /* Storyboard.storyboard */,
+				6E27C1022BF4970F00BC0BA6 /* SettingsView.swift */,
+				6E27C1042BF4A62700BC0BA6 /* TextView.swift */,
+			);
+			path = "WatchLuvYou Watch App";
+			sourceTree = "<group>";
+		};
+		6E27C0B32BF46C2C00BC0BA6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				6E27C0B42BF46C2C00BC0BA6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6ED786342C1F6959002983D6 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6E0462762BF4687E00286E34 /* LuvYou */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E04628B2BF4687F00286E34 /* Build configuration list for PBXNativeTarget "LuvYou" */;
+			buildPhases = (
+				6E0462732BF4687E00286E34 /* Sources */,
+				6E0462742BF4687E00286E34 /* Frameworks */,
+				6E0462752BF4687E00286E34 /* Resources */,
+				6E27C0BC2BF46C2C00BC0BA6 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E27C0B72BF46C2C00BC0BA6 /* PBXTargetDependency */,
+				6EEC4D202C1F1A280033995A /* PBXTargetDependency */,
+			);
+			name = LuvYou;
+			packageProductDependencies = (
+				6E13339A2BF7BA3600EC7223 /* FirebaseFirestore */,
+				6ECC85752C1003E500A8F552 /* FirebaseStorage */,
+			);
+			productName = LuvYou;
+			productReference = 6E0462772BF4687E00286E34 /* LuvYou.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6E27C0AA2BF46C2C00BC0BA6 /* WatchLuvYou Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E27C0B92BF46C2C00BC0BA6 /* Build configuration list for PBXNativeTarget "WatchLuvYou Watch App" */;
+			buildPhases = (
+				6E27C0A72BF46C2C00BC0BA6 /* Sources */,
+				6E27C0A82BF46C2C00BC0BA6 /* Frameworks */,
+				6E27C0A92BF46C2C00BC0BA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WatchLuvYou Watch App";
+			packageProductDependencies = (
+				6EEC4D212C1F1B6A0033995A /* FirebaseFirestore */,
+				6EEC4D232C1F1B7F0033995A /* FirebaseStorage */,
+			);
+			productName = "WatchLuvYou Watch App";
+			productReference = 6E27C0AB2BF46C2C00BC0BA6 /* WatchLuvYou Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6E04626F2BF4687E00286E34 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					6E0462762BF4687E00286E34 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					6E27C0AA2BF46C2C00BC0BA6 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+				};
+			};
+			buildConfigurationList = 6E0462722BF4687E00286E34 /* Build configuration list for PBXProject "LuvYou" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6E04626E2BF4687E00286E34;
+			packageReferences = (
+				6E27C1092BF4C96300BC0BA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 6E0462782BF4687E00286E34 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6E0462762BF4687E00286E34 /* LuvYou */,
+				6E27C0AA2BF46C2C00BC0BA6 /* WatchLuvYou Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6E0462752BF4687E00286E34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7DB7E02BF94D0800B22A86 /* PretendardVariable.ttf in Resources */,
+				6E27C1072BF4C6C300BC0BA6 /* GoogleService-Info.plist in Resources */,
+				6E0462842BF4687F00286E34 /* Assets.xcassets in Resources */,
+				6E0462872BF4687F00286E34 /* Base in Resources */,
+				6E0462822BF4687E00286E34 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E27C0A92BF46C2C00BC0BA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E7DB7E12BF94D0800B22A86 /* PretendardVariable.ttf in Resources */,
+				6E27C1082BF4C6C300BC0BA6 /* GoogleService-Info.plist in Resources */,
+				6E27C0B52BF46C2C00BC0BA6 /* Preview Assets.xcassets in Resources */,
+				6E27C0B22BF46C2C00BC0BA6 /* Assets.xcassets in Resources */,
+				6E27C0C72BF46C4600BC0BA6 /* Storyboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6E0462732BF4687E00286E34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6ECC856C2C0EF1B700A8F552 /* PeriodViewController.swift in Sources */,
+				6E927C652C1A903300EDA673 /* StartViewController.swift in Sources */,
+				6E927C5D2C187C3F00EDA673 /* TaskListViewController.swift in Sources */,
+				6E927C672C1AE9DD00EDA673 /* CodeViewController.swift in Sources */,
+				6ECC856E2C0FF8F200A8F552 /* AddPeriodViewController.swift in Sources */,
+				6E8995122C00A89D00C55ACC /* CalendarViewController.swift in Sources */,
+				6E3D9BF02C1C95EE00077FB2 /* JoinStartViewController.swift in Sources */,
+				6E7419142C05FB4E00649DCA /* AddTaskViewController.swift in Sources */,
+				6E3D9BEE2C1C2DEB00077FB2 /* SettingsViewController.swift in Sources */,
+				6E04627F2BF4687E00286E34 /* ChatViewController.swift in Sources */,
+				6E927C632C1A902300EDA673 /* JoinViewController.swift in Sources */,
+				6E04627B2BF4687E00286E34 /* AppDelegate.swift in Sources */,
+				6E8995162C00DE5A00C55ACC /* TabBarViewController.swift in Sources */,
+				6E927C5F2C1A8B4E00EDA673 /* InstallViewController.swift in Sources */,
+				6E04627D2BF4687E00286E34 /* SceneDelegate.swift in Sources */,
+				6E7419162C06D0FE00649DCA /* TaskDetailViewController.swift in Sources */,
+				6E8995102C00A40100C55ACC /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E27C0A72BF46C2C00BC0BA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E27C1032BF4970F00BC0BA6 /* SettingsView.swift in Sources */,
+				6E27C1052BF4A62700BC0BA6 /* TextView.swift in Sources */,
+				6E27C1012BF496F800BC0BA6 /* ContentView.swift in Sources */,
+				6E27C0AE2BF46C2C00BC0BA6 /* WatchLuvYouApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6E27C0B72BF46C2C00BC0BA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E27C0AA2BF46C2C00BC0BA6 /* WatchLuvYou Watch App */;
+			targetProxy = 6E27C0B62BF46C2C00BC0BA6 /* PBXContainerItemProxy */;
+		};
+		6EEC4D202C1F1A280033995A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E27C0AA2BF46C2C00BC0BA6 /* WatchLuvYou Watch App */;
+			targetProxy = 6EEC4D1F2C1F1A280033995A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6E0462802BF4687E00286E34 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E0462812BF4687E00286E34 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6E0462852BF4687F00286E34 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E0462862BF4687F00286E34 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6E0462892BF4687F00286E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6E04628A2BF4687F00286E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6E04628C2BF4687F00286E34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R69P62SDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LuvYou/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LuvYou;
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진을 찍기 위해 카메라에 접근하려고 합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "날씨 정보 제공을 위해 필요합니다";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "기기에 사진을 저장하기 위해 필요합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 선택하기 위해 사진 보관함에 접근하려고 합니다.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.jeewoo.LuvYou;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E04628D2BF4687F00286E34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9R69P62SDC;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LuvYou/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = LuvYou;
+				INFOPLIST_KEY_NSCameraUsageDescription = "사진을 찍기 위해 카메라에 접근하려고 합니다.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "날씨 정보 제공을 위해 필요합니다";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "기기에 사진을 저장하기 위해 필요합니다.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "사진을 선택하기 위해 사진 보관함에 접근하려고 합니다.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.jeewoo.LuvYou;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6E27C0BA2BF46C2C00BC0BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchLuvYou Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 9R69P62SDC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchLuvYou;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ios.jeewoo.LuvYou;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.jeewoo.LuvYou.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Debug;
+		};
+		6E27C0BB2BF46C2C00BC0BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WatchLuvYou Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 9R69P62SDC;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WatchLuvYou;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = ios.jeewoo.LuvYou;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.jeewoo.LuvYou.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.4;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6E0462722BF4687E00286E34 /* Build configuration list for PBXProject "LuvYou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E0462892BF4687F00286E34 /* Debug */,
+				6E04628A2BF4687F00286E34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E04628B2BF4687F00286E34 /* Build configuration list for PBXNativeTarget "LuvYou" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E04628C2BF4687F00286E34 /* Debug */,
+				6E04628D2BF4687F00286E34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6E27C0B92BF46C2C00BC0BA6 /* Build configuration list for PBXNativeTarget "WatchLuvYou Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E27C0BA2BF46C2C00BC0BA6 /* Debug */,
+				6E27C0BB2BF46C2C00BC0BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6E27C1092BF4C96300BC0BA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.26.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6E13339A2BF7BA3600EC7223 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E27C1092BF4C96300BC0BA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		6ECC85752C1003E500A8F552 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E27C1092BF4C96300BC0BA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		6EEC4D212C1F1B6A0033995A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E27C1092BF4C96300BC0BA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		6EEC4D232C1F1B7F0033995A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E27C1092BF4C96300BC0BA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 6E04626F2BF4687E00286E34 /* Project object */;
+}
