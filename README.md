@@ -2,10 +2,11 @@
 
 # 💕 2091177 임지우 - **LuvYou** (럽유)
 
+<br/>
+<br/>
+
 <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/logo.png" width = "500"/>
 
-<br/>
-<br/>
 
 </div>
 
