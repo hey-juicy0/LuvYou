@@ -100,6 +100,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         popUpView.isHidden = isPopup
         setupImageView()
         transparentOverlayView.isHidden = isPopup
+        
         if gender != "여성" {
             emotionButton.tintColor = UIColor.your
             loversEmotion.tintColor = UIColor.my
@@ -111,6 +112,13 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         downloadImage()
         startListeningToImageChanges()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     override func viewDidLayoutSubviews() {
@@ -168,11 +176,10 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
         imageRef.getData(maxSize: 10 * 1024 * 1024) { [weak self] data, error in
             if let error = error {
-                print("Error downloading image: \(error)")
+                self?.imageView.image = UIImage(named: "imageholder")
                 return
             }
             guard let self = self, let data = data, let image = UIImage(data: data) else {
-                print("downloadImage: No image data or invalid data")
                 return
             }
             self.imageView.image = image
@@ -377,21 +384,20 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             }
             
             if let data = data, let image = UIImage(data: data) {
-                // 권한 확인 및 요청
-                PHPhotoLibrary.requestAuthorization { status in
-                    if status == .authorized {
-                        // 사진 라이브러리에 이미지 저장
-                        UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
-                        print("Image saved to photo library")
-                    } else {
-                        print("Photo library access not authorized")
-                    }
-                }
+                UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
             }
         }
     }
 
-
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            print("Error saving image: \(error)")
+            showAlert(message: "사진 저장에 실패했습니다.\n다시 시도해주세요.")
+        } else {
+            showAlert(message: "기기에 사진이 저장되었습니다!")
+        }
+    }
+    
 
     func showAlert(message: String) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
@@ -418,6 +424,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             tailView.heightAnchor.constraint(equalToConstant: 15),
         ])
     }
+    
     func getWeatherInfo(for city: String) {
         guard let coordinates = getCoordinates(for: city) else {
             print("Coordinates not found for the city: \(city)")

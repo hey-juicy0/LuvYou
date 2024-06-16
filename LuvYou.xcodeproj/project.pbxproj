@@ -23,7 +23,6 @@
 		6E27C1032BF4970F00BC0BA6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27C1022BF4970F00BC0BA6 /* SettingsView.swift */; };
 		6E27C1052BF4A62700BC0BA6 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27C1042BF4A62700BC0BA6 /* TextView.swift */; };
 		6E27C1072BF4C6C300BC0BA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E27C1062BF4C6C300BC0BA6 /* GoogleService-Info.plist */; };
-		6E27C1082BF4C6C300BC0BA6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E27C1062BF4C6C300BC0BA6 /* GoogleService-Info.plist */; };
 		6E3D9BEE2C1C2DEB00077FB2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D9BED2C1C2DEB00077FB2 /* SettingsViewController.swift */; };
 		6E3D9BF02C1C95EE00077FB2 /* JoinStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3D9BEF2C1C95EE00077FB2 /* JoinStartViewController.swift */; };
 		6E7419142C05FB4E00649DCA /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E7419132C05FB4D00649DCA /* AddTaskViewController.swift */; };
@@ -39,10 +38,8 @@
 		6E927C652C1A903300EDA673 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E927C642C1A903300EDA673 /* StartViewController.swift */; };
 		6E927C672C1AE9DD00EDA673 /* CodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E927C662C1AE9DD00EDA673 /* CodeViewController.swift */; };
 		6ECC856C2C0EF1B700A8F552 /* PeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC856B2C0EF1B700A8F552 /* PeriodViewController.swift */; };
-		6ECC856E2C0FF8F200A8F552 /* AddPeriodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ECC856D2C0FF8F200A8F552 /* AddPeriodViewController.swift */; };
 		6ECC85762C1003E500A8F552 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6ECC85752C1003E500A8F552 /* FirebaseStorage */; };
-		6EEC4D222C1F1B6A0033995A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6EEC4D212C1F1B6A0033995A /* FirebaseFirestore */; };
-		6EEC4D242C1F1B7F0033995A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6EEC4D232C1F1B7F0033995A /* FirebaseStorage */; };
+		6ED786362C200013002983D6 /* HalfSizePresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED786352C200013002983D6 /* HalfSizePresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,7 +105,8 @@
 		6E927C642C1A903300EDA673 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		6E927C662C1AE9DD00EDA673 /* CodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeViewController.swift; sourceTree = "<group>"; };
 		6ECC856B2C0EF1B700A8F552 /* PeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodViewController.swift; sourceTree = "<group>"; };
-		6ECC856D2C0FF8F200A8F552 /* AddPeriodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPeriodViewController.swift; sourceTree = "<group>"; };
+		6ED786352C200013002983D6 /* HalfSizePresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfSizePresentationController.swift; sourceTree = "<group>"; };
+		6ED7863C2C202A6A002983D6 /* WatchLuvYou Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchLuvYou Watch App.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +123,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6EEC4D222C1F1B6A0033995A /* FirebaseFirestore in Frameworks */,
-				6EEC4D242C1F1B7F0033995A /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,18 +151,18 @@
 		6E0462792BF4687E00286E34 /* LuvYou */ = {
 			isa = PBXGroup;
 			children = (
+				6E27C1062BF4C6C300BC0BA6 /* GoogleService-Info.plist */,
 				6ED786342C1F6959002983D6 /* Images */,
 				6E3D9BED2C1C2DEB00077FB2 /* SettingsViewController.swift */,
 				6E3D9BEF2C1C95EE00077FB2 /* JoinStartViewController.swift */,
 				6E927C662C1AE9DD00EDA673 /* CodeViewController.swift */,
-				6ECC856D2C0FF8F200A8F552 /* AddPeriodViewController.swift */,
 				6ECC856B2C0EF1B700A8F552 /* PeriodViewController.swift */,
 				6E7419152C06D0FE00649DCA /* TaskDetailViewController.swift */,
 				6E927C5C2C187C3F00EDA673 /* TaskListViewController.swift */,
 				6E7419132C05FB4D00649DCA /* AddTaskViewController.swift */,
 				6E8995152C00DE5A00C55ACC /* TabBarViewController.swift */,
-				6E27C1062BF4C6C300BC0BA6 /* GoogleService-Info.plist */,
 				6E7DB7DF2BF94D0800B22A86 /* PretendardVariable.ttf */,
+				6ED786352C200013002983D6 /* HalfSizePresentationController.swift */,
 				6E04627A2BF4687E00286E34 /* AppDelegate.swift */,
 				6E04627C2BF4687E00286E34 /* SceneDelegate.swift */,
 				6E04627E2BF4687E00286E34 /* ChatViewController.swift */,
@@ -193,6 +189,7 @@
 		6E27C0AC2BF46C2C00BC0BA6 /* WatchLuvYou Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				6ED7863C2C202A6A002983D6 /* WatchLuvYou Watch App.entitlements */,
 				6E27C1002BF496F800BC0BA6 /* ContentView.swift */,
 				6E27C0AD2BF46C2C00BC0BA6 /* WatchLuvYouApp.swift */,
 				6E27C0B12BF46C2C00BC0BA6 /* Assets.xcassets */,
@@ -260,8 +257,6 @@
 			);
 			name = "WatchLuvYou Watch App";
 			packageProductDependencies = (
-				6EEC4D212C1F1B6A0033995A /* FirebaseFirestore */,
-				6EEC4D232C1F1B7F0033995A /* FirebaseStorage */,
 			);
 			productName = "WatchLuvYou Watch App";
 			productReference = 6E27C0AB2BF46C2C00BC0BA6 /* WatchLuvYou Watch App.app */;
@@ -325,7 +320,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E7DB7E12BF94D0800B22A86 /* PretendardVariable.ttf in Resources */,
-				6E27C1082BF4C6C300BC0BA6 /* GoogleService-Info.plist in Resources */,
 				6E27C0B52BF46C2C00BC0BA6 /* Preview Assets.xcassets in Resources */,
 				6E27C0B22BF46C2C00BC0BA6 /* Assets.xcassets in Resources */,
 				6E27C0C72BF46C4600BC0BA6 /* Storyboard.storyboard in Resources */,
@@ -340,10 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ECC856C2C0EF1B700A8F552 /* PeriodViewController.swift in Sources */,
+				6ED786362C200013002983D6 /* HalfSizePresentationController.swift in Sources */,
 				6E927C652C1A903300EDA673 /* StartViewController.swift in Sources */,
 				6E927C5D2C187C3F00EDA673 /* TaskListViewController.swift in Sources */,
 				6E927C672C1AE9DD00EDA673 /* CodeViewController.swift in Sources */,
-				6ECC856E2C0FF8F200A8F552 /* AddPeriodViewController.swift in Sources */,
 				6E8995122C00A89D00C55ACC /* CalendarViewController.swift in Sources */,
 				6E3D9BF02C1C95EE00077FB2 /* JoinStartViewController.swift in Sources */,
 				6E7419142C05FB4E00649DCA /* AddTaskViewController.swift in Sources */,
@@ -597,6 +591,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WatchLuvYou Watch App/WatchLuvYou Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchLuvYou Watch App/Preview Content\"";
@@ -611,7 +606,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ios.jeewoo.LuvYou.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.jeewoo.LuvYou.Watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -627,6 +622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "WatchLuvYou Watch App/WatchLuvYou Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WatchLuvYou Watch App/Preview Content\"";
@@ -641,7 +637,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = ios.jeewoo.LuvYou.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = ios.jeewoo.LuvYou.Watch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -702,16 +698,6 @@
 			productName = FirebaseFirestore;
 		};
 		6ECC85752C1003E500A8F552 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E27C1092BF4C96300BC0BA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		6EEC4D212C1F1B6A0033995A /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6E27C1092BF4C96300BC0BA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		6EEC4D232C1F1B7F0033995A /* FirebaseStorage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 6E27C1092BF4C96300BC0BA6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;

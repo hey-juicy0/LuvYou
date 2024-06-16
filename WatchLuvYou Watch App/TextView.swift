@@ -36,7 +36,7 @@ struct TextView: View {
     }
 
     private func sendMessageButtonTapped() {
-        print("꼬망이가 당신에게 메시지를 보냈습니다: \(sendMessage)")
+        print("메시지 도착: \(sendMessage)")
     }
     private var themeColor: UIColor {
            switch themeColorString {

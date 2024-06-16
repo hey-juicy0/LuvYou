@@ -9,7 +9,9 @@ import UIKit
 import FirebaseFirestore
 
 class SettingsViewController: UIViewController {
+    @IBOutlet weak var closeView: UIView!
     override func viewDidLoad() {
+        closeView.layer.cornerRadius = 3
         super.viewDidLoad()
     }
     

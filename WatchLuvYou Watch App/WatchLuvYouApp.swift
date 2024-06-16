@@ -6,12 +6,8 @@
 //
 
 import SwiftUI
-import Firebase
 @main
 struct WatchLuvYou_Watch_AppApp: App {
-    init() {
-        FirebaseApp.configure()
-    }
     var body: some Scene {
         WindowGroup {
             TabView {
