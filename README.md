@@ -5,7 +5,9 @@
 <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/logo.png" width = "500"/>
 
 </div>
-<br>
+
+<br/>
+<br/>
 
 
 ## ✔️ 제작 배경
@@ -31,10 +33,10 @@
 
 ## 📸 앱 화면
 
-| 런칭화면 | 초기실행 | 시작하기 | 초대 번호|
-|:-:|:-:|:-:|:-:|
-| <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/launch.png" width = "250"/>| <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/install.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/start.png" width = "250"/> |<img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/join.png" width = "250"/>|
-| LaunchScreen | 초대번호/시작하기 중 선택 | 시작 | 연인에게 공유받은 초대번호로 시작|
+| 초기실행 | 시작하기 | 초대 번호|
+|:-:|:-:|:-:|
+| <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/install.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/start.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/join.png" width = "250"/> |
+| 초대번호/시작하기 중 선택 | 시작 | 연인에게 공유받은 초대번호로 시작|
 
 
 <br>   
