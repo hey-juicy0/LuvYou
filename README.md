@@ -4,10 +4,12 @@
 
 <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/logo.png" width = "500"/>
 
+<br/>
+<br/>
+
 </div>
 
-<br/>
-<br/>
+
 
 
 ## ✔️ 제작 배경
