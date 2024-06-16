@@ -33,7 +33,6 @@
 
 <br>
 
-<div align = "center>
   
 ## 📸 앱 화면
   
@@ -41,8 +40,6 @@
 |:-:|:-:|:-:|
 | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/install.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/start.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/join.png" width = "250"/> |
 | 초대번호/시작하기 중 선택 | 시작 | 연인에게 공유받은 초대번호로 시작|
-  
-</div>
 
 <br>   
 
