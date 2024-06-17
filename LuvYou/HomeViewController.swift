@@ -70,7 +70,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     override func viewDidLoad() {
         super.viewDidLoad()
         //실시간 관찰
-                
+
         imagePicker.delegate = self
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
