@@ -13,6 +13,7 @@ class JoinStartViewController: UIViewController {
     var db = Firestore.firestore()
     let documentID = UserDefaults.standard.string(forKey: "documentID") ?? ""
     var getGender:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
@@ -35,12 +36,11 @@ class JoinStartViewController: UIViewController {
                 
         let birthdayString = dateFormatter.string(from: birthday)
         
-        let gender = (getGender == "여성") ? "남성" : "여성"
 
         let loverData: [String: Any] = [
             "name": name,
             "birthday": birthdayString,
-            "gender": gender
+            "gender": getGender
             
         ]
         let lover2CollectionRef = db.collection("lovers").document(documentID).collection("lover1")
@@ -60,6 +60,10 @@ class JoinStartViewController: UIViewController {
                         if let name = data["startDate"] as? String {
                             UserDefaults.standard.set(name, forKey: "startDate")
                         }
+                        if let gender = data["gender"] as? String{
+                            self.getGender = (gender == "여성") ? "남성" : "여성"
+
+                        }
                     }
                 }
             }
@@ -75,7 +79,7 @@ class JoinStartViewController: UIViewController {
                 UserDefaults.standard.set(2, forKey: "loverID")
                 UserDefaults.standard.set(self.documentID, forKey: "documentID")
                 UserDefaults.standard.set(name,forKey: "myName")
-                UserDefaults.standard.set(gender, forKey: "gender")
+                UserDefaults.standard.set(self.getGender, forKey: "myGender")
                 UserDefaults.standard.set(birthdayString, forKey: "myBday")
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let tabBar = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController

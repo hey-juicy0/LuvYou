@@ -30,7 +30,7 @@ class TaskDetailViewController: UIViewController {
     var calendarViewController: CalendarViewController?
     var task: Task?
     let name = UserDefaults.standard.string(forKey: "myName") ?? ""
-    let gender = UserDefaults.standard.string(forKey: "gender") ?? ""
+    let gender = UserDefaults.standard.string(forKey: "myGender") ?? ""
     let documentID = UserDefaults.standard.string(forKey: "documentID") ?? ""
     override func viewDidLoad() {
         super.viewDidLoad()

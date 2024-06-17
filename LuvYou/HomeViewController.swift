@@ -125,6 +125,38 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let dateString = dateFormatter.string(from: currentDate)
         dateLabel.text = dateString
         
+        Firestore.firestore().collection("lovers").document(documentID).getDocument { [weak self] (document, error) in
+            guard let self = self else { return }
+            if let error = error {
+                print("Error fetching document: \(error)")
+                self.showAlertAndNavigateToInstallViewController()
+                return
+            }
+            
+            guard let document = document, document.exists else {
+                print("Document does not exist")
+                self.showAlertAndNavigateToInstallViewController()
+                return
+            }
+        }
+    }
+    
+    
+    
+    func showAlertAndNavigateToInstallViewController() {
+        print("뭐임")
+        let alertController = UIAlertController(title: nil, message: "당신의 연인이 LuvYou를 끝내셨습니다. 확인을 누르면 종료됩니다.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "종료", style: .destructive, handler: { [weak self] _ in
+            guard let self = self else { return }
+            self.navigateToInstallViewController()
+        }))
+        present(alertController, animated: true, completion: nil)
+    }
+    func navigateToInstallViewController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let installViewController = storyboard.instantiateViewController(withIdentifier: "InstallViewController")
+        installViewController.modalPresentationStyle = .fullScreen
+        present(installViewController, animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -476,11 +508,11 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         // 시와 분을 두 자리 숫자로 변환하여 baseTime 생성
         let baseTime: String
         if minute < 30 {
-            if hour != 23{
-                baseTime = String(format: "%02d30", hour-1)
-            }
-            else{
+            if hour == 00{
                 baseTime = String(format: "%02d30", 23)
+            }
+            else {
+                baseTime = String(format: "%02d30", hour-1)
             }
         } else {
             baseTime = String(format: "%02d30", hour)
@@ -511,6 +543,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         
+        print(url)
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print("Error: \(error?.localizedDescription ?? "Unknown error")")
