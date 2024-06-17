@@ -91,7 +91,6 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         let labelString = NSMutableAttributedString()
         labelString.addAttribute(.kern, value: 10, range: NSRange(location: 0, length: labelString.length))
         ddayLabel.attributedText = labelString
-        updateDDay()
         
         titleLabel.font = UIFont(name: "PretendardVariable-Regular", size: 20)
         ddayLabel.font = UIFont(name: "PretendardVariable-SemiBold", size: 27)
@@ -119,6 +118,13 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         locationManager.delegate = self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        updateDDay()
+        let currentDate = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy년 MM월 dd일"
+        let dateString = dateFormatter.string(from: currentDate)
+        dateLabel.text = dateString
+        
     }
     
     override func viewDidLayoutSubviews() {
