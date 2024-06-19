@@ -30,6 +30,7 @@
 - **Firestore Database 사용**: 실시간 채팅, 서로의 기분 공유, 캘린더 일정 관리 기능
 - **CoreLocation & 기상청 API 활용**: 위치 기반 현재 날씨 정보 제공 기능
 - 입력한 성별에 따라 적용되는 **색상 테마 기능**
+- UIRefreshControl을 이용한 **Pull to Refresh** 기능
 
 <br>
 
