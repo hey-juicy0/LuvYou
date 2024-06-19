@@ -10,6 +10,8 @@
 [시연영상/Watch OS앱](https://youtube.com/shorts/6PA2NWSuNHY?feature=share)
 
 <br>
+<br>
+<br>
 
 <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/logo.png" width = "500"/>
 
