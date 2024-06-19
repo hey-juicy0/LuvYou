@@ -55,7 +55,7 @@
 | 초기 캘린더 | 채팅 | 50m 이내 |
 |:-:|:-:|:-:|
 | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/boy_calendar.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/boy_chat.png" width = "250"/> |<img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/boy_location.png" width = "250"/> |
-| 연애 시작일, 각종 '데이'들을 기반으로 한 기본 캘린더| 성별에 따라 다르게 표시되는 채팅| 연인과 50m 이내에 위치하면 알림 |
+| 연애 시작일, 각종 '데이'들을 <br> 기반으로 한 기본 캘린더| 성별에 따라 다르게 표시되는 채팅| 연인과 50m 이내에 위치하면 알림 |
 
 
 | 일정 추가 | 일정 목록 | 일정 상세 |
@@ -78,7 +78,7 @@
 | 초기 캘린더 | 채팅 | 50m 이내 |
 |:-:|:-:|:-:|
 | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/girl_calendar.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/girl_chat.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/girl_location.png" width = "250"/> |
-| 연애 시작일, 각종 '데이'들을 기반으로 한 기본 캘린더| 성별에 따라 다르게 표시되는 채팅| 연인과 50m 이내에 위치하면 알림 |
+| 연애 시작일, 각종 '데이'들을 <br> 기반으로 한 기본 캘린더| 성별에 따라 다르게 표시되는 채팅| 연인과 50m 이내에 위치하면 알림 |
 
 
 | 일정 추가 | 일정 목록 | 일정 상세 |
