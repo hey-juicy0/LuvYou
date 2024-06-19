@@ -23,6 +23,8 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
     }()
     let documentID = UserDefaults.standard.string(forKey: "documentID") ?? ""
     let startDate = UserDefaults.standard.string(forKey: "startDate") ?? ""
+    let refreshControl = UIRefreshControl()
+
     let specialDays: [String] = ["12-24", "12-25", "11-11", "03-14", "05-14", "02-14"]
     let gender = UserDefaults.standard.string(forKey: "myGender") ?? ""
     @IBOutlet weak var leftButton: UIButton!
@@ -46,6 +48,11 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         calendarCollectionView.frame.size.width = screenWidth
         daysOfWeekCollectionView.frame.size.width = screenWidth
         daysOfWeekCollectionView.frame.size.height = 50.0
+        
+        // 테이블 뷰에 UIRefreshControl을 연결
+        calendarCollectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(refreshData(_:)), for: .valueChanged)
+
         
         if gender != "여성"{
             daysOfWeekCollectionView.backgroundColor = UIColor.your
@@ -177,7 +184,8 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
                 if let taskDate = Calendar.current.date(from: dateComponents) {
                     
                     updateLoveLabel(for: cell.loveLabel, with: taskDate, startDate: startDate)
-
+                    
+                    updateBirthday(for: cell.birthday, with: taskDate)
                     
                     updateSpecialLabel(for: cell.specialLabel, with: taskDate)
                     
@@ -211,13 +219,21 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
     @IBAction func refreshTapped(_ sender: UIButton) {
+        currentDate = Date()
+        updateMonthYearLabel()
         calendarCollectionView.reloadData()
         fetchTasksFromFirestore()
-        let alert = UIAlertController(title: nil, message: "캘린더가 새로고침 되었습니다!", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
-        present(alert, animated: true, completion: nil)
 
     }
+    
+    @objc func refreshData(_ sender: UIRefreshControl) {
+        calendarCollectionView.reloadData()
+        fetchTasksFromFirestore()
+        DispatchQueue.main.async {
+            sender.endRefreshing()
+        }
+    }
+
     
     @objc func taskButtonClicked(_ sender: UIButton) {
         guard let taskListVC = storyboard?.instantiateViewController(withIdentifier: "TaskListViewController") as? TaskListViewController else { return }
@@ -289,6 +305,27 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         }
     }
 
+    func updateBirthday(for birthday: UIImageView, with date: Date) {
+        
+        let myBday = UserDefaults.standard.string(forKey: "myBday")
+        let loverBday = UserDefaults.standard.string(forKey: "loverBday")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd"
+        let dateString = dateFormatter.string(from: date)
+        
+        if dateString == myBday || dateString == loverBday{
+            birthday.isHidden = false
+            if gender != "여성" {
+                birthday.tintColor = UIColor.your
+            }
+        }
+        else{
+            birthday.isHidden = true
+        }
+        birthday.adjustsImageSizeForAccessibilityContentSizeCategory = true
+        birthday.sizeToFit()
+    }
 
 
     func updateSpecialLabel(for label: UILabel, with date: Date) {
@@ -298,7 +335,6 @@ class CalendarViewController: UIViewController, UICollectionViewDelegate, UIColl
         let dateString = dateFormatter.string(from: date)
         label.numberOfLines = 0
         label.sizeToFit()
-
 
         if specialDays.contains(dateString) {
             switch dateString {
@@ -328,6 +364,7 @@ class DateCell: UICollectionViewCell {
     @IBOutlet weak var taskButton: UIButton!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var loveLabel: UILabel!
+    @IBOutlet weak var birthday: UIImageView!
     @IBOutlet weak var specialLabel: UILabel!
 }
 

@@ -31,18 +31,11 @@ class JoinStartViewController: UIViewController {
         
         let birthday = birthdayPicker.date
                 
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-                
-        let birthdayString = dateFormatter.string(from: birthday)
+        let birthdayFormatter = DateFormatter()
+        birthdayFormatter.dateFormat = "MM-dd"
         
-
-        let loverData: [String: Any] = [
-            "name": name,
-            "birthday": birthdayString,
-            "gender": getGender
-            
-        ]
+        let birthdayString = birthdayFormatter.string(from: birthday)
+        
         let lover2CollectionRef = db.collection("lovers").document(documentID).collection("lover1")
 
         lover2CollectionRef.document("info").getDocument { (documentSnapshot, error) in
@@ -60,14 +53,26 @@ class JoinStartViewController: UIViewController {
                         if let name = data["startDate"] as? String {
                             UserDefaults.standard.set(name, forKey: "startDate")
                         }
-                        if let gender = data["gender"] as? String{
+                        if let gender = data["gender"] as? String {
                             self.getGender = (gender == "여성") ? "남성" : "여성"
-
                         }
                     }
+                    
+                    self.saveLoverData(name: name, birthday: birthdayString)
+                } else {
+                    // lover1 컬렉션에 데이터가 없을 경우에도 lover2 컬렉션에 데이터를 저장
+                    self.saveLoverData(name: name, birthday: birthdayString)
                 }
             }
         }
+    }
+
+    func saveLoverData(name: String, birthday: String) {
+        let loverData: [String: Any] = [
+            "name": name,
+            "birthday": birthday,
+            "gender": self.getGender ?? ""
+        ]
         
         let loverRef = db.collection("lovers").document(documentID)
         loverRef.collection("lover2").document("info").setData(loverData) { error in
@@ -78,16 +83,17 @@ class JoinStartViewController: UIViewController {
                 UserDefaults.standard.set(true, forKey: "hasStartedBefore")
                 UserDefaults.standard.set(2, forKey: "loverID")
                 UserDefaults.standard.set(self.documentID, forKey: "documentID")
-                UserDefaults.standard.set(name,forKey: "myName")
+                UserDefaults.standard.set(name, forKey: "myName")
                 UserDefaults.standard.set(self.getGender, forKey: "myGender")
-                UserDefaults.standard.set(birthdayString, forKey: "myBday")
+                UserDefaults.standard.set(birthday, forKey: "myBday")
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let tabBar = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
-                        tabBar.modalPresentationStyle = .fullScreen
-                        self.present(tabBar, animated: true, completion: nil)
+                let tabBar = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! TabBarController
+                tabBar.modalPresentationStyle = .fullScreen
+                self.present(tabBar, animated: true, completion: nil)
             }
         }
     }
+
     private func showAlert(message: String) {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))

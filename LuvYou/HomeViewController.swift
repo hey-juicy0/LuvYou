@@ -615,6 +615,7 @@ class HomeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 extension HomeViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else { return }
+        
         // 위치에서 도시 이름 가져오기
         CLGeocoder().reverseGeocodeLocation(location) { (placemarks, error) in
             guard let placemark = placemarks?.first, error == nil else {
@@ -628,13 +629,56 @@ extension HomeViewController: CLLocationManagerDelegate {
                 print("City not found for the current location.")
             }
         }
+        
+        guard let currentUserLocation = locations.last else { return }
+        updateFirestoreLocation(currentUserLocation)
+
+        let loverLocationRef = firestore.collection("lovers").document(documentID).collection("location").document("lover\(loverID == 1 ? 2 : 1)")
+        loverLocationRef.getDocument { [weak self] (document, error) in
+            guard let self = self else { return }
+            if let error = error {
+                print("Error fetching lover's location: \(error)")
+                return
+            }
+            guard let document = document, document.exists, let data = document.data() else {
+                print("Lover's location document does not exist or has no data")
+                return
+            }
+            
+            if let loverLatitude = data["latitude"] as? Double,
+               let loverLongitude = data["longitude"] as? Double {
+                let loverLocation = CLLocation(latitude: loverLatitude, longitude: loverLongitude)
+                
+                // 현재 사용자와 연인의 위치 간의 거리를 계산합니다.
+                let distance = currentUserLocation.distance(from: loverLocation)
+                if distance <= 50{
+                    showAlert(message: "연인과 50m 이내에 있습니다❣️")
+                }
+            }
+        }
         // 위치 업데이트 중지 (필요한 경우)
         locationManager.stopUpdatingLocation()
     }
-    
+
+
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location manager failed with error: \(error.localizedDescription)")
     }
+    
+    private func updateFirestoreLocation(_ location: CLLocation) {
+        let locationData: [String: Any] = [
+            "latitude": location.coordinate.latitude,
+            "longitude": location.coordinate.longitude,
+            "timestamp": FieldValue.serverTimestamp()
+        ]
+        let currentUserLocationRef = firestore.collection("lovers").document(documentID).collection("location").document("lover\(loverID)")
+        currentUserLocationRef.setData(locationData) { error in
+            if let error = error {
+                print("Error updating user's location: \(error)")
+            }
+        }
+    }
+
 }
 
 extension HomeViewController: XMLParserDelegate {

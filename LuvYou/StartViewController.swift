@@ -77,8 +77,12 @@ class StartViewController: UIViewController, UITextFieldDelegate {
                 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let birthdayFormatter = DateFormatter()
+        birthdayFormatter.dateFormat = "MM-dd"
+        
                 
-        let birthdayString = dateFormatter.string(from: birthday)
+        let birthdayString = birthdayFormatter.string(from: birthday)
         let startDateString = dateFormatter.string(from: startDate)
         
         let finalGender = gender
@@ -107,7 +111,7 @@ class StartViewController: UIViewController, UITextFieldDelegate {
                 UserDefaults.standard.set(startDateString, forKey: "startDate")
                 UserDefaults.standard.set(name, forKey: "myName")
                 UserDefaults.standard.set(finalGender, forKey: "myGender")
-                UserDefaults.standard.set(birthdayString, forKey: "myBirthday")
+                UserDefaults.standard.set(birthdayString, forKey: "myBday")
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                         let codeVC = storyboard.instantiateViewController(withIdentifier: "CodeViewController") as! CodeViewController
                 codeVC.code = randomCode

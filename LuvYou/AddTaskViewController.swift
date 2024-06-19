@@ -24,7 +24,7 @@ class AddTaskViewController: UIViewController {
     var calendarViewController: CalendarViewController?
     
     let db = Firestore.firestore()
-    var member = ""
+    var member:String = UserDefaults.standard.string(forKey: "myName") ?? ""
     var BtnArray = [UIButton]()
     let gender = UserDefaults.standard.string(forKey: "myGender") ?? ""
     let documentID = UserDefaults.standard.string(forKey: "documentID") ?? ""
