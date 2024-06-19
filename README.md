@@ -7,7 +7,6 @@
 [시연영상/IOS앱](https://youtu.be/fYjKECCRTTI)
 
 <br>
-<br>
 
 [시연영상/Watch OS앱](https://youtube.com/shorts/6PA2NWSuNHY?feature=share)
 
