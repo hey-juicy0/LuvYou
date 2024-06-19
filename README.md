@@ -35,7 +35,7 @@
 
 ## ✔️ 기대 효과
 - 확장성: 편지, 일기, 밸런스 게임 등의 요소들은 개발하여 추가하기만 하면 되어 확장성이 높음.
-- 추후에 월경 주기 관리 기능, 카카오맵/네이버맵 API를 사용한 
+- 추후에 월경 주기 관리 기능, 카카오맵/네이버맵 API를 비롯하여 위치에 기반한 여러 기능 추가 예정
 - UI/UX: 다크모드를 고려한 귀여운 색상 테마 적용, UX를 높이기 위해 UI를 간편하고 친절하게 구성  -> 많은 사용자들이 불편함 없이 사용 가능할 것
 - ⌚️ WatchOS 어플과 연동하여 사용할 수 있어 더욱 알차게 서비스를 사용 가능
 
@@ -66,7 +66,7 @@
 | 초기 캘린더 | 채팅 | 50m 이내 |
 |:-:|:-:|:-:|
 | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/boy_calendar.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/boy_chat.png" width = "250"/> |<img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/boy_location.png" width = "250"/> |
-| 연애 시작일, 각종 '데이'들을 <br> 기반으로 한 기본 캘린더| 성별에 따라 다르게 표시되는 채팅| 연인과 50m 이내에 위치하면 알림 |
+| 연애 시작일, 각종 '데이'들을 <br> 기반으로 한 기본 캘린더 <br> Pull to Refresh 기능 추가| 성별에 따라 다르게 표시되는 채팅| 연인과 50m 이내에 위치하면 알림 |
 
 
 | 일정 추가 | 일정 목록 | 일정 상세 |
@@ -89,7 +89,7 @@
 | 초기 캘린더 | 채팅 | 50m 이내 |
 |:-:|:-:|:-:|
 | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/girl_calendar.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/girl_chat.png" width = "250"/> | <img src = "https://github.com/hey-juicy0/LuvYou/blob/main/LuvYou/Images/girl_location.png" width = "250"/> |
-| 연애 시작일, 각종 '데이'들을 <br> 기반으로 한 기본 캘린더| 성별에 따라 다르게 표시되는 채팅| 연인과 50m 이내에 위치하면 알림 |
+| 연애 시작일, 각종 '데이'들을 <br> 기반으로 한 기본 캘린더 <br> Pull to Refresh 기능 추가 | 성별에 따라 다르게 표시되는 채팅| 연인과 50m 이내에 위치하면 알림 |
 
 
 | 일정 추가 | 일정 목록 | 일정 상세 |
